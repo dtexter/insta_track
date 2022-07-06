@@ -1,4 +1,5 @@
 import random
+import time
 from instagrapi import Client
 
 
@@ -42,3 +43,4 @@ for account in account_list:
     for post in post_list:
         comment = random.choice(comment_list)
         bot.comment(post, comment)
+        time.sleep(random.randint(2, 10))
