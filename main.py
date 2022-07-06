@@ -7,17 +7,17 @@ account_list = []
 post_list = []
 comment_list = []
 
-with open("accounts.txt", "r") as f:
+with open("accounts.txt", "r", encoding="utf-8") as f:
     accounts = f.read().splitlines()
     for account in accounts:
         account_list.append(account)
 
-with open("posts.txt", "r") as f:
+with open("posts.txt", "r", encoding="utf-8") as f:
     posts = f.read().splitlines()
     for post in posts:
         post_list.append(post)
 
-with open("comments.txt", "r") as f:
+with open("comments.txt", "r", encoding="utf-8") as f:
     comments = f.read().splitlines()
     for comment in comments:
         comment_list.append(comment)
