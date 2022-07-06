@@ -37,10 +37,11 @@ class Bot:
         print(f"Commented with: {comment}")
 
 
-for account in account_list:
-    bot = Bot()
-    bot.login(account)
-    for post in post_list:
-        comment = random.choice(comment_list)
-        bot.comment(post, comment)
-        time.sleep(random.randint(2, 10))
+if __name__ == "__main__":
+    for account in account_list:
+        bot = Bot()
+        bot.login(account)
+        for post in post_list:
+            comment = random.choice(comment_list)
+            bot.comment(post, comment)
+            time.sleep(random.randint(2, 10))
