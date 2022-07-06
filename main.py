@@ -1,5 +1,4 @@
 import random
-
 from instagrapi import Client
 
 
@@ -31,8 +30,10 @@ class Bot:
         self.user_id = self.cl.user_id
 
     def comment(self, post, comment):
-        print(post)
-        print(comment)
+        media_pk = self.cl.media_pk_from_url(post)
+        media_id = self.cl.media_id(media_pk)
+        self.cl.media_comment(media_id, comment)
+        print(f"Commented with: {comment}")
 
 
 for account in account_list:
