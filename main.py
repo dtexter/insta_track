@@ -41,6 +41,7 @@ if __name__ == "__main__":
     for account in account_list:
         bot = Bot()
         bot.login(account)
+        print(f"Logged in on account: {account}")
         for post in post_list:
             comment = random.choice(comment_list)
             bot.comment(post, comment)
